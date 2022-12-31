@@ -2,7 +2,7 @@ module.exports = {
   testEnvironment: "miniflare",
   testMatch: ["**/*.spec.ts"],
   transform: {
-    "^.+\\.ts?$": "esbuild-jest",
+    "^.+\\.ts?$": "ts-jest",
   },
   moduleNameMapper: {
     "jsonpath-plus":

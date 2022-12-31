@@ -1,6 +1,10 @@
 import { Hono } from "hono";
 
-const hello = new Hono();
-hello.get("/", (c) => c.text("Hello 🔥"));
-
-export default hello;
+export const hello = new Hono();
+const res = {
+    message: "Hello 🔥",
+}
+hello.get("/", (c) => {
+    c.header('Content-Type', 'application/json')
+    return c.json(res)
+});

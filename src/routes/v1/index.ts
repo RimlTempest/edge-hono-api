@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import hello from "./hello";
+import { hello } from "./hello";
 import { qrCodeApi } from "./qrCode";
 
 export const api = new Hono();

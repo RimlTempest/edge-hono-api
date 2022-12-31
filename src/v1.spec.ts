@@ -1,4 +1,4 @@
-import { app } from "./index";
+import app from "./index";
 
 describe("API エンドポイントテスト", () => {
   const req = {
@@ -8,7 +8,6 @@ describe("API エンドポイントテスト", () => {
 
   test("[正常系] GET / helloAPI テスト", async () => {
     const res: Response = await app.request('http://localhost:8787/api/v1', req)
-    expect(res.headers.get('x-powered-by')).toBe('Hono');
     expect(res.status).toBe(200);
 
     const body = await res.json();
@@ -41,13 +40,11 @@ describe("API エンドポイントテスト", () => {
 
   test("[正常系] GET /qr API テスト", async () => {
     const res: Response = await app.request("http://localhost:8787/api/v1/qr/filename.png?text=test&type=png",req);
-    expect(res.headers.get('x-powered-by')).toBe('Hono');
     expect(res.status).toBe(201);
   });
 
   test("[異常系]GET /qr API テスト no query", async () => {
     const res: Response = await app.request("http://localhost:8787/api/v1/qr/",req);
-    expect(res.headers.get('x-powered-by')).toBe('Hono');
     expect(res.status).toBe(500);
   });
 });
