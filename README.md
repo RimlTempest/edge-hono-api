@@ -6,6 +6,9 @@ Cloudflare Workers は Service Worker 由来。
 Cloudflare Workers は Service Workers を踏襲した API でアプリを作ります。
 [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
+こちらにデプロイ済みです。   
+https://edge-qr-api.riml.workers.dev/
+
 ## Cloudflare Workers で出来ること
 
 edge とはエッジサーバーにてコードを実行するもので、オリジンサーバーに到達する前に実行されます。   
